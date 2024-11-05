@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol one-shot
+  «type: X»
+  «description: One-shot circuit»
+  «library file: |.subckt oneshot tshot clk out out1\nS1 ta st set 0 MySW\nC1 N01 trig 10n\nR1 trig 0 1\n¥1 vcc 0 set ¥0 vcc trig ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ AND\nV2 vcc 0 1\nC2 st 0 1µ\nB1 vt 0 V=V(st)+tgain*V(tshot)\nB2 reset 0 V=if(V(ta)>V(vt),1,0)\n¥2 vcc 0 out out1 set reset ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nB3 ta 0 V=Time\nB4 N01 0 V=V(clk)*10\nR2 clk 0 10Meg\nR3 tshot 0 10Meg\n.model MySW SW Ron=1m Roff=10Meg Vt=0.5 Vh=-0.2\n.ends oneshot»
+  «shorted pins: false»
+  «rect (-600,-600) (600,400) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-550,400) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (0,-50) 1 0 0 0x1000000 -1 -1 "ONESHOT"»
+  «text (-300,-700) 1 0 0 0x0 -1 -1 "tgain=1"»
+  «pin (-600,-400) (220,120) 1 13 0 0x0 -1 "tshot"»
+  «pin (-600,200) (60,20) 1 7 0 0x0 -1 "clk"»
+  «pin (600,200) (-200,-70) 1 14 0 0x0 -1 "out"»
+  «pin (600,-400) (-60,20) 1 11 0 0x0 -1 "out1"»
+»
