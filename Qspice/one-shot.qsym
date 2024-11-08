@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol one-shot
+  «type: X»
+  «description: One-shot circuit (monostable)»
+  «library file: |.subckt oneshot tshot clk out /out\nI1 0 ramp 1\nC1 ramp 0 tgain\nB2 reset 0 V=if(V(ramp)>V(tshot),1,0)\n¥2 vcc 0 out /out clk reset ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ SR-FLOP\nR1 tshot 0 10Meg\nV2 vcc 0 1\nS1 0 ramp /out 0 MySW\n.model MySW SW Ron=1m Roff=10Meg Vt=0.5 Vh=-0.2\n.ends oneshot»
+  «shorted pins: false»
+  «line (-500,-100) (-400,-200) 0 0 0x1000000 -1 -1»
+  «line (-400,-200) (-500,-300) 0 0 0x1000000 -1 -1»
+  «rect (-500,-400) (500,400) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-400,650) 1 0 0 0x1000000 -1 -1 "X1"»
+  «text (-150,500) 1 0 0 0x1000000 -1 -1 "ONESHOT"»
+  «text (-200,-550) 1 0 0 0x0 -1 -1 "tgain=1u"»
+  «pin (-500,200) (50,10) 1 7 0 0x0 -1 "tshot"»
+  «pin (-500,-200) (310,20) 1 11 0 0x0 -1 "clk"»
+  «pin (500,200) (-180,-90) 1 14 0 0x0 -1 "out"»
+  «pin (500,-200) (-180,-90) 1 14 0 0x0 -1 "/out"»
+»
