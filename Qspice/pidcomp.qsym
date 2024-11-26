@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol PID
+  «type: X»
+  «description: PID Compensator»
+  «library file: |.subckt pid err out \nB1 out 0 V=Kp*V(err)+Ki*idt(V(err),0)+Kd*ddt(V(err))\n.ends pid»
+  «shorted pins: false»
+  «line (-400,250) (-350,200) 0 0 0x1000000 -1 -1»
+  «line (-350,200) (-400,150) 0 0 0x1000000 -1 -1»
+  «rect (-400,400) (600,-400) 0 0 0 0x1000000 0x1000000 -1 0 -1»
+  «text (108,496) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (100,300) 1 0 0 0x1000000 -1 -1 "PID"»
+  «text (-346,20) 1 7 0 0x0 -1 -1 "Kp=<1>"»
+  «text (-346,-150) 1 7 0 0x0 -1 -1 "Ki=<1>"»
+  «text (-346,-300) 1 7 0 0x0 -1 -1 "Kd=<1>"»
+  «pin (-400,200) (30,0) 1 15 0 0x0 -1 "err"»
+  «pin (600,200) (-30,0) 1 15 0 0x0 -1 "out"»
+»

@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol SCR-embeded
+  «type: X»
+  «description: SCR»
+  «library file: |.SUBCKT MySCR  1 2 3\n; Pin order:   A G K\nQ1 2 4 1 QPSCR AREA=.67 OFF\nQ2 4 2 3 QNSCR AREA=.67\nQ3 5 4 1 QPSCR AREA=.33 OFF\nQ4 4 5 3 QNSCR AREA=.33\nRBN 2 5 40\n.MODEL QNSCR NPN(TF=400NS TR=1.6US CJC=75PF CJE=175PF XTB=2.5\n+ IS=1E-14 ISE=3E-9 NE=2 BF=100 BR=25 ISC=3E-9 NC=2)\n.MODEL QPSCR PNP(TF=90NS TR=180NS CJC=75PF CJE=80PF XTB=2.5\n+ IS=1E-14 ISE=3E-9 NE=2 BF=50 BR=25 ISC=3E-9 NC=2 RE=.03)\n.ENDS MySCR\n»
+  «shorted pins: false»
+  «line (-50,100) (-200,200) 0 0 0x1000000 -1 -1»
+  «line (-100,100) (100,100) 0 0 0x1000000 -1 -1»
+  «line (0,200) (0,100) 0 0 0x1000000 -1 -1»
+  «line (0,-50) (0,-200) 0 0 0x1000000 -1 -1»
+  «triangle (0,100) (-100,-50) (100,-50) 0 0 0x1000000 0x2000000 -1 -1»
+  «text (100,200) 1 7 0 0x1000000 -1 -1 "T1"»
+  «text (100,-200) 1 7 0 0x1000000 -1 -1 "MySCR"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "A"»
+  «pin (-200,200) (0,0) 1 0 0 0x0 -1 "G"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "K"»
+»

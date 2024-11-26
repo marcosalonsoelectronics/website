@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol Constant
+  «type: X»
+  «description: Constant»
+  «library file: |.subckt constant out\nV1 out 0 V=C\n.ends constant»
+  «shorted pins: false»
+  «line (-300,200) (-300,-200) 0 0 0x1000000 -1 -1»
+  «line (-300,-200) (200,-200) 0 0 0x1000000 -1 -1»
+  «line (200,-200) (300,0) 0 0 0x1000000 -1 -1»
+  «line (300,0) (200,200) 0 0 0x1000000 -1 -1»
+  «line (200,200) (-300,200) 0 0 0x1000000 -1 -1»
+  «text (-300,303) 1 7 0 0x1000000 -1 -1 "X1"»
+  «text (-43,300) 1 7 2 0x1000000 -1 -1 "CONSTANT"»
+  «text (-254,0) 1 7 0 0x0 -1 -1 "C=<1>"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
+»
