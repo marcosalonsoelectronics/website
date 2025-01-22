@@ -4,8 +4,6 @@ Material accessible from my website.
 
 Visit my website for more information: https://sites.google.com/view/j-marcos-alonso/home
 
-## Tools, components, symbols, code, etc., for Qorvo's free QSpice circuit simulator.
-
 **QSpice/Qorvo Links**
 
 Get the QSpice simulator from Qorvo [here](https://www.qorvo.com/).
