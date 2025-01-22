@@ -16,6 +16,8 @@ Information about the Digitial Mars (DMC) compiler is [here](README_DMC.md).
 
 **Other Recommended Sites**
 
+Robdunn4/QSpice: [GitHub repo](https://github.com/robdunn4/QSpice)
+
 The PyQSPICE Scripting Tool [GitHub repo](https://github.com/Qorvo/PyQSPICE).
 
 QSpice Forum @KSKelvin's [Github repo](https://github.com/KSKelvin-Github/Qspice/).
