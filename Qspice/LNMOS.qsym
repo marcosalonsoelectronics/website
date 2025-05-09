@@ -1,0 +1,23 @@
+ÿØÿÛ«symbol LNMOS
+  «type: X»
+  «description: MOSFET with linear parasitic capacitances»
+  «library file: |.subckt LNMOS d g s\nCgd d g Cgd\nCgs g s Cgs\nCds d s Cds\nBc d s I=if( V(g,s)<Vth,0, if( V(d,s)<V(g,s)-Vth , km*( 2*(V(g,s) - Vth)*V(d,s) - V(d,s)**2 ), km*( V(g,s) - Vth )**2 ) )\nDb s d Dbody\n.model Dbody D Vfwd=Vdon Ron=Rdon\n.ends LNMOS»
+  «shorted pins: false»
+  «line (0,200) (0,150) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,0) 0 0 0x1000000 -1 -1»
+  «line (-200,150) (-200,-150) 0 0 0x1000000 -1 -1»
+  «line (-200,0) (-300,0) 0 0 0x1000000 -1 -1»
+  «line (0,-150) (-150,-150) 0 0 0x1000000 -1 -1»
+  «line (0,150) (-150,150) 0 0 0x1000000 -1 -1»
+  «line (-150,150) (-150,-150) 0 0 0x1000000 -1 -1»
+  «line (0,0) (-150,0) 0 0 0x1000000 -1 -1»
+  «triangle (-150,0) (-55,25) (-55,-25) 0 0 0x1000000 0x3000000 -1 -1»
+  «text (100,200) 1 7 0 0x1000000 -1 -1 "M1"»
+  «text (100,-200) 1 7 0 0x1000000 -1 -1 "LNMOS"»
+  «text (50,-450) 1 0 2 0x1000000 -1 -1 "km=0.48 Vth=3 "»
+  «text (200,-700) 1 0 2 0x1000000 -1 -1 "Cgd=60p Cgs=1.14n Cds=140p"»
+  «text (100,-950) 1 0 2 0x1000000 -1 -1 "Vdon=1 Rdon=5m"»
+  «pin (0,200) (0,0) 1 0 0 0x0 -1 "d"»
+  «pin (-300,0) (0,0) 1 0 0 0x0 -1 "g"»
+  «pin (0,-200) (0,0) 1 0 0 0x0 -1 "s"»
+»
