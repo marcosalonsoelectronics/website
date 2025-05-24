@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol pvm
+  «type: X»
+  «description: Solar module with shadow input»
+  «library file: |.subckt pvm A K SH\nBpv K G I=IF( V(SH)>0.99, 0, Isc*( 1 - (V(A,K)/Voc)**m ) )\nRsh G K Rsh\nRs G A Rs\nR1 SH 0 1Meg\n.ends pvm»
+  «shorted pins: false»
+  «line (-400,500) (0,250) 0 0 0x1000000 -1 -1»
+  «line (0,250) (400,500) 0 0 0x1000000 -1 -1»
+  «rect (-400,-500) (400,500) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-400,500) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (0,150) 1 0 0 0x1000000 -1 -1 "PVM"»
+  «text (300,-650) 1 0 2 0x1000000 -1 -1 "Isc=9.52 Voc=39.06"»
+  «text (-100,-850) 1 0 2 0x1000000 -1 -1 "m=14.38"»
+  «text (250,-1050) 1 0 2 0x1000000 -1 -1 "Rs=1m Rsh=1meg"»
+  «pin (0,500) (0,0) 1 13 0 0x0 -1 "A"»
+  «pin (0,-500) (0,0) 1 14 0 0x0 -1 "K"»
+  «pin (-400,0) (0,0) 1 7 0 0x0 -1 "SH"»
+»
