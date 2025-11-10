@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol integ
+  «type: X»
+  «description: Non-ideal integrator»
+  «library file: |.subckt integ in out\n.ic V(out)=ic\nC1 out 0 1\nRin in 0 10Meg\nB1 0 out I=V(in)\nR1 out 0 tau\n.ends integ»
+  «shorted pins: false»
+  «line (300,0) (-300,-300) 0 0 0x1000000 -1 -1»
+  «line (-300,-300) (-300,300) 0 0 0x1000000 -1 -1»
+  «line (-300,300) (300,0) 0 0 0x1000000 -1 -1»
+  «text (-200,250) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (-50,0) 0.857 0 0 0x1000000 -1 -1 "INTEG"»
+  «text (50,-350) 1 0 0 0x0 -1 -1 "tau=1"»
+  «text (0,-550) 1 0 0 0x0 -1 -1 "ic=0"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "in"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "out"»
+»
