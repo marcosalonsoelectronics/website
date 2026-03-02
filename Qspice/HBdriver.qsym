@@ -1,0 +1,19 @@
+ÿØÿÛ«symbol HBdriver
+  «type: X»
+  «description: Machine generated symbol for HBDRIVER»
+  «library file: |.subckt HBdriver s sd +gt -gt +gb -gb\n¥1 N01 0 out ¥ N02 sf N01 ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ¥ ulator space=fmin mark=fmax\nV1 N01 0 2\nV3 N02 0 1\nB1 fm 0 V=V(out)-1\nR1 s 0 10Meg\nB2 sf 0 V=if(V(s)>=0, if(V(s)<=1, V(s), 1), 0)\nB3 sq 0 V=if(V(rfm)>pi*dt, 1, 0)\nB4 +gt -gt V=if( V(sd)<0.1, if(V(fm)>0, Vcc*V(sq), 0), 0)\nB5 +gb -gb V=if( V(sd)<0.1, if(V(fm)<0, Vcc*V(sq), 0), 0 )\nB6 rfm 0 V=abs(V(fm))\nR2 sd 0 10Meg\n.ends HBdriver»
+  «shorted pins: false»
+  «rect (-800,-700) (800,700) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (0,200) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 15 0 0x1000000 -1 -1 "HBDRIVER"»
+  «text (-450,-1000) 1 0 0 0x0 -1 -1 "fmin=15k"»
+  «text (-400,-1200) 1 0 0 0x0 -1 -1 "fmax=150k"»
+  «text (-550,-800) 1 0 0 0x0 -1 -1 "Vcc=15"»
+  «text (-500,-1400) 1 0 0 0x0 -1 -1 "dt=0.05"»
+  «pin (-800,300) (60,20) 1 7 0 0x0 -1 "s"»
+  «pin (-800,-300) (50,20) 1 7 0 0x0 -1 "sd"»
+  «pin (800,500) (-60,10) 1 11 0 0x0 -1 "+gt"»
+  «pin (800,200) (-60,10) 1 11 0 0x0 -1 "-gt"»
+  «pin (800,-200) (-60,10) 1 11 0 0x0 -1 "+gb"»
+  «pin (800,-500) (-60,10) 1 11 0 0x0 -1 "-gb"»
+»
